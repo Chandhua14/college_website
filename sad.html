@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ol {
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student List</h2>
+    <ol id="studentList"></ol>
+
+    <script>
+        // JSON object containing a list of students
+        const students = [
+            { "name": "Alice Johnson", "age": 21 },
+            { "name": "Bob Smith", "age": 22 },
+            { "name": "Charlie Davis", "age": 23 },
+            { "name": "Diana Evans", "age": 20 },
+            { "name": "Evan Green", "age": 22 },
+            { "name": "Fiona Harris", "age": 24 },
+            { "name": "George Irwin", "age": 21 },
+            { "name": "Hannah Jones", "age": 23 },
+            { "name": "Ian King", "age": 22 },
+            { "name": "Jane Lee", "age": 25 }
+        ];
+
+        // Function to display the student list
+        function displayStudentList() {
+            const studentList = document.getElementById('studentList');
+            students.forEach(student => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${student.name}, Age: ${student.age}`;
+                studentList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display the student list
+        displayStudentList();
+    </script>
+
+</body>
+</html>
